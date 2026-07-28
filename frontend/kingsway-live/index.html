@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingsway Luxury</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <h1>Kingsway Luxury</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Treating You Like Royalty 👑</h2>
+    <p>Premium Laundry & Home Services at Your Doorstep</p>
+    <button onclick="scrollToBooking()">Book Now</button>
+  </section>
+
+  <section class="hero">
+  <h2>Kingsway Luxury Services 👑</h2>
+  <p>Where Clean Meets Class & Comfort Meets Royalty</p>
+  <button onclick="scrollToBooking()">Book Now</button>
+</section>
+
+  <!-- SERVICES -->
+ <section id="services">
+  <h2>Our Premium Services</h2>
+  <div class="grid">
+
+    <div class="card">
+  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Laundry Service">
+  <h3>Laundry & Dry Cleaning</h3>
+  <p>Fresh, clean, and professionally handled garments.</p>
+</div>
+
+    <div class="card">
+      <h3>House Cleaning</h3>
+      <p>Spotless spaces with attention to detail.</p>
+    </div>
+
+    <div class="card">
+      <h3>Interior Decor</h3>
+      <p>Transform your home into elegance.</p>
+    </div>
+
+    <div class="card">
+      <h3>Home Haircut</h3>
+      <p>Professional grooming at your convenience.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Our Pricing</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Laundry</h3>
+      <p>₦2,000 - ₦5,000</p>
+      <p>Depending on load</p>
+    </div>
+
+    <div class="card">
+      <h3>House Cleaning</h3>
+      <p>₦10,000+</p>
+      <p>Full home service</p>
+    </div>
+
+    <div class="card">
+      <h3>Interior Decor</h3>
+      <p>Custom Pricing</p>
+      <p>Based on design</p>
+    </div>
+
+    <div class="card">
+      <h3>Home Haircut</h3>
+      <p>₦3,000</p>
+      <p>At your convenience</p>
+    </div>
+
+  </div>
+</section>
+  <!-- BOOKING -->
+  <section id="booking">
+    <h2>Book a Service</h2>
+
+   <form id="bookingForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="text" id="location" placeholder="Your Location" required>
+
+  <select id="service" required>
+    <option value="">Select Service</option>
+    <option>Laundry</option>
+    <option>House Cleaning</option>
+    <option>Interior Decor</option>
+    <option>Home Haircut</option>
+  </select>
+
+  <button type="submit">Submit Booking</button>
+</form>
+
+    <p id="response"></p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Abuja, Nigeria</p>
+    <p>📞 08136905393</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
