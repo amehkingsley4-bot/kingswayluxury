@@ -58,6 +58,14 @@ nav a:hover {
     transform: translateY(0);
   }
 }
+
+.hero h1 {
+  animation: fadeInDown 1.5s ease;
+}
+
+.hero p {
+  animation: fadeInUp 2s ease;
+}
 /* HERO */
 .hero {
   text-align: center;
