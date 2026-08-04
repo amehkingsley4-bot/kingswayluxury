@@ -145,6 +145,40 @@ img {
   border-radius: 10px;
 }
 
+/* PRICING DROPDOWN */
+.pricing-item {
+  margin: 15px 0;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, purple, gold);
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.dropdown-btn:hover {
+  opacity: 0.9;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 15px;
+  background: #f9f9f9;
+  border-left: 4px solid purple;
+  border-radius: 0 0 8px 8px;
+}
+
+.dropdown-content p {
+  margin: 8px 0;
+}
+
 .service-card {
   background: #fff;
   padding: 20px;
