@@ -14,3 +14,10 @@ Service: ${service}`;
 
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 });
+
+document.querySelectorAll(".toggle-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    content.classList.toggle("active");
+  });
+});

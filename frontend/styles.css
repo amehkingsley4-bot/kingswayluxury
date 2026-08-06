@@ -119,7 +119,32 @@ img {
   gap: 30px;
   margin-top: 40px;
   }
+.price-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 10px;
+}
 
+.price-content.active {
+  max-height: 600px;
+}
+
+/* PRICE IMAGE */
+.price-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* BUTTON ALIGNMENT */
+.card .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
 /* pricing */
 
 #pricing h2 {
