@@ -1,23 +1,20 @@
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+const form = document.getElementById("bookingForm");
 
-  const name = document.getElementById("name").value;
-  const location = document.getElementById("location").value;
-  const service = document.getElementById("service").value;
+if (form) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  const message = `Hello Kingsway Luxury 👑,%0A
+    const name = document.getElementById("name").value;
+    const location = document.getElementById("location").value;
+    const service = document.getElementById("service").value;
+
+    const message = `Hello Kingsway Luxury 👑,%0A
 Name: ${name}%0A
 Location: ${location}%0A
 Service: ${service}`;
 
-  const phone = "2348136905393"; // your number
+    const phone = "2348136905393";
 
-  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-});
-
-document.querySelectorAll(".toggle-btn").forEach(button => {
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-    content.classList.toggle("active");
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   });
-});
+}
