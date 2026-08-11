@@ -1,121 +1,326 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // ==============================
-  // START BOOKING DROPDOWN
-  // ==============================
+    /* =========================================
+       LAUNDRY PRICE LIST
+    ========================================= */
 
-  document.querySelectorAll(".start-booking-btn").forEach(button => {
+    const laundryPrices = {
 
-    button.addEventListener("click", function () {
+        "Native": {
+            "Washing": 600,
+            "Ironing": 600,
+            "Washing & Ironing": 1200,
+            "Starching & Ironing": 1000
+        },
 
-      const bookingContent = this.closest(".service-booking-card")
-        .querySelector(".booking-content");
+        "Shirt": {
+            "Washing": 300,
+            "Ironing": 300,
+            "Washing & Ironing": 600
+        },
 
-      bookingContent.classList.toggle("active");
+        "Trouser": {
+            "Washing": 300,
+            "Ironing": 300,
+            "Washing & Ironing": 600
+        },
 
-      // Change button text
-      if (bookingContent.classList.contains("active")) {
-        this.textContent = "Close Booking";
-      } else {
-        this.textContent = "Start Booking";
-      }
+        "Skirt": {
+            "Washing": 300,
+            "Ironing": 300,
+            "Washing & Ironing": 600
+        },
 
-    });
+        "Gown": {
+            "Washing": 700,
+            "Ironing": 700,
+            "Washing & Ironing": 1400,
+            "Starching & Ironing": 1000
+        },
 
-  });
+        "Agbada": {
+            "Washing": 1000,
+            "Ironing": 1000,
+            "Washing & Ironing": 2000,
+            "Starching & Ironing": 1500
+        },
+"Bedsheet": {
+    "Washing": 1000
+},
 
+"Duvet": {
+    "Small": 1500,
+    "Medium": 2000,
+    "Large": 3000
+}
 
-  // ==============================
-  // PRICE LIST DROPDOWN
-  // ==============================
-
-  document.querySelectorAll(".toggle-btn").forEach(button => {
-
-    button.addEventListener("click", function () {
-
-      const content = this.nextElementSibling;
-
-      content.classList.toggle("active");
-
-      if (content.classList.contains("active")) {
-        this.textContent = "Hide Prices";
-      } else {
-        this.textContent = "View Prices";
-      }
-
-    });
-
-  });
-
-
-  // ==============================
-  // ADD ANOTHER ITEM
-  // ==============================
-
-  document.querySelectorAll(".add-item-btn").forEach(button => {
-
-    button.addEventListener("click", function () {
-
-      const bookingItems = this
-        .closest(".laundry-booking-form")
-        .querySelector(".booking-items");
-
-      const newRow = document.createElement("div");
-
-      newRow.className = "booking-row";
-
-      newRow.innerHTML = `
-        <select class="item-select">
-          <option value="">Select Item</option>
-          <option value="Native">Native</option>
-          <option value="Shirt">Shirt</option>
-          <option value="Trouser">Trouser</option>
-          <option value="Skirt">Skirt</option>
-          <option value="Gown">Gown</option>
-          <option value="Agbada">Agbada</option>
-          <option value="Bedsheet">Bedsheet</option>
-          <option value="Duvet">Duvet</option>
-          <option value="Others">Others</option>
-        </select>
-
-        <input
-          type="number"
-          class="item-quantity"
-          min="1"
-          placeholder="Quantity"
-        >
-
-        <select class="item-price">
-          <option value="">Price</option>
-        </select>
-
-        <span class="item-total">₦0</span>
-
-        <button type="button" class="remove-item-btn">
-          Remove
-        </button>
-      `;
-
-      bookingItems.appendChild(newRow);
-
-    });
-
-  });
+    };
 
 
-  // ==============================
-  // REMOVE ITEM
-  // ==============================
+    /* =========================================
+       FORMAT MONEY
+    ========================================= */
 
-  document.addEventListener("click", function (e) {
-
-    if (e.target.classList.contains("remove-item-btn")) {
-
-      e.target.closest(".booking-row").remove();
-
+    function formatMoney(amount) {
+        return "₦" + Number(amount).toLocaleString("en-NG");
     }
 
-  });
 
+    /* =========================================
+       UPDATE PRICE OPTIONS
+    ========================================= */
+
+    function updatePriceOptions(row) {
+
+        const itemSelect = row.querySelector(".item-select");
+        const priceSelect = row.querySelector(".item-price");
+
+        const selectedItem = itemSelect.value;
+
+        // Clear old options
+        priceSelect.innerHTML =
+            '<option value="">Select Service</option>';
+
+        if (!selectedItem || !laundryPrices[selectedItem]) {
+            return;
+        }
+
+        const services = laundryPrices[selectedItem];
+
+        Object.entries(services).forEach(([service, price]) => {
+
+            const option = document.createElement("option");
+
+            option.value = price;
+
+            option.textContent =
+                `${service} - ${formatMoney(price)}`;
+
+            option.dataset.service = service;
+
+            priceSelect.appendChild(option);
+        });
+    }
+
+
+    /* =========================================
+       CALCULATE ONE ROW
+    ========================================= */
+
+    function calculateRow(row) {
+
+        const quantityInput =
+            row.querySelector(".item-quantity");
+
+        const priceSelect =
+            row.querySelector(".item-price");
+
+        const totalDisplay =
+            row.querySelector(".item-total");
+
+        const quantity =
+            Number(quantityInput.value) || 0;
+
+        const price =
+            Number(priceSelect.value) || 0;
+
+        const total = quantity * price;
+
+        totalDisplay.textContent =
+            formatMoney(total);
+
+        calculateGrandTotal();
+    }
+
+
+    /* =========================================
+       CALCULATE OVERALL TOTAL
+    ========================================= */
+
+    function calculateGrandTotal() {
+
+        let grandTotal = 0;
+
+        document.querySelectorAll(".booking-row")
+            .forEach(row => {
+
+                const quantity =
+                    Number(
+                        row.querySelector(".item-quantity").value
+                    ) || 0;
+
+                const price =
+                    Number(
+                        row.querySelector(".item-price").value
+                    ) || 0;
+
+                grandTotal += quantity * price;
+            });
+
+        const grandTotalDisplay =
+            document.querySelector(".grand-total");
+
+        if (grandTotalDisplay) {
+            grandTotalDisplay.textContent =
+                formatMoney(grandTotal);
+        }
+    }
+
+
+    /* =========================================
+       ITEM SELECTION
+    ========================================= */
+
+    document.addEventListener("change", function (e) {
+
+        if (e.target.classList.contains("item-select")) {
+
+            const row =
+                e.target.closest(".booking-row");
+
+            updatePriceOptions(row);
+            calculateRow(row);
+        }
+
+
+        if (e.target.classList.contains("item-price")) {
+
+            const row =
+                e.target.closest(".booking-row");
+
+            calculateRow(row);
+        }
+    });
+
+
+    /* =========================================
+       QUANTITY CHANGE
+    ========================================= */
+
+    document.addEventListener("input", function (e) {
+
+        if (e.target.classList.contains("item-quantity")) {
+
+            const row =
+                e.target.closest(".booking-row");
+
+            calculateRow(row);
+        }
+    });
+
+
+    /* =========================================
+       ADD ANOTHER ITEM
+    ========================================= */
+
+    const addItemButton =
+        document.querySelector(".add-item-btn");
+
+    if (addItemButton) {
+
+        addItemButton.addEventListener("click", function () {
+
+            const container =
+                document.querySelector(".booking-items");
+
+            const firstRow =
+                container.querySelector(".booking-row");
+
+            const newRow =
+                firstRow.cloneNode(true);
+
+            // Reset values
+            newRow.querySelector(".item-select").value = "";
+
+            newRow.querySelector(".item-price").innerHTML =
+                '<option value="">Select Service</option>';
+
+            newRow.querySelector(".item-quantity").value = "";
+
+            newRow.querySelector(".item-total").textContent =
+                "₦0";
+
+            // Add remove button
+            const removeButton =
+                document.createElement("button");
+
+            removeButton.type = "button";
+            removeButton.className = "remove-item-btn";
+            removeButton.textContent = "Remove";
+
+            newRow.appendChild(removeButton);
+
+            container.appendChild(newRow);
+
+            calculateGrandTotal();
+        });
+    }
+
+
+    /* =========================================
+       REMOVE ITEM
+    ========================================= */
+
+    document.addEventListener("click", function (e) {
+
+        if (e.target.classList.contains("remove-item-btn")) {
+
+            const rows =
+                document.querySelectorAll(".booking-row");
+
+            // Don't remove the last remaining row
+            if (rows.length > 1) {
+
+                e.target.closest(".booking-row").remove();
+
+                calculateGrandTotal();
+            }
+        }
+    });
+
+
+    /* =========================================
+       VIEW PRICES TOGGLE
+    ========================================= */
+
+    document.querySelectorAll(".toggle-btn")
+        .forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                const content =
+                    this.nextElementSibling;
+
+                if (content) {
+                    content.classList.toggle("active");
+                }
+
+            });
+
+        });
+
+
+    /* =========================================
+       START BOOKING BUTTON
+    ========================================= */
+
+    document.querySelectorAll(".start-booking-btn")
+        .forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                const bookingContent =
+                    this.closest(".service-booking-card")
+                        .querySelector(".booking-content");
+
+                if (bookingContent) {
+
+                    bookingContent.classList.toggle("active");
+
+                }
+
+            });
+
+        });
 
 });
