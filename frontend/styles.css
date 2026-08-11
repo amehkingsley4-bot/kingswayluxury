@@ -1,321 +1,361 @@
+/* =========================================
+   GENERAL RESET
+========================================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #0c0c0c;
-  color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    background: #0c0c0c;
+    color: #f5f5f5;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: linear-gradient(to right, #1a0026, #2d0036);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(to right, #1a0026, #2d0036);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 header h1 {
-  font-family: 'Cinzel', serif;
-  color: gold;
-  letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+    color: gold;
+    letter-spacing: 2px;
 }
 
 nav a {
-  color: #ddd;
-  margin-left: 25px;
-  text-decoration: none;
-  transition: 0.3s;
+    color: #ddd;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover {
-  color: gold;
+    color: gold;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    text-align: center;
+    padding: 140px 20px;
+    background: linear-gradient(to right, #0c0c0c, #2d0036);
 }
 
 .hero h1 {
-  animation: fadeInDown 1.5s ease;
+    font-size: 48px;
+    color: gold;
+    animation: fadeInDown 1.5s ease;
 }
 
 .hero p {
-  animation: fadeInUp 2s ease;
-}
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 140px 20px;
-  background: linear-gradient(to right, #0c0c0c, #2d0036);
+    margin: 15px 0 25px;
+    color: #ccc;
+    animation: fadeInUp 2s ease;
 }
 
-.hero h2 {
-  font-size: 48px;
-  color: gold;
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.hero p {
-  margin: 15px 0 25px;
-  color: #ccc;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* BUTTON */
-button {
-  background: gold;
-  color: black;
-  border: none;
-  padding: 14px 30px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-}
 
-button:hover {
-  background: #8000ff; /* purple */
-  color: white;
-}
+/* =========================================
+   SECTIONS
+========================================= */
 
-/* SECTIONS */
 section {
-  padding: 80px 50px;
-  text-align: center;
-}
-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+    padding: 80px 50px;
+    text-align: center;
 }
 
-/* SERVICES */
+
+/* =========================================
+   SERVICES GRID
+========================================= */
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-  }
-.price-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.price-content.active {
-  max-height: 600px;
-}
 
-/* PRICE IMAGE */
-.price-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-}
-
-/* BUTTON ALIGNMENT */
-.card .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
-}
-/* pricing */
-
-#pricing h2 {
-  color: gold;
-}
+/* =========================================
+   CARD
+========================================= */
 
 .card {
-  background: #111;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  transition: 0.3s;
-}
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* PRICING DROPDOWN */
-.pricing-item {
-  margin: 15px 0;
-}
-
-.dropdown-btn {
-  width: 100%;
-  padding: 15px;
-  background: linear-gradient(135deg, purple, gold);
-  color: white;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  text-align: left;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.dropdown-btn:hover {
-  opacity: 0.9;
-}
-
-.dropdown-content {
-  display: none;
-  padding: 15px;
-  background: #f9f9f9;
-  border-left: 4px solid purple;
-  border-radius: 0 0 8px 8px;
-}
-
-.dropdown-content p {
-  margin: 8px 0;
-}
-
-.service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.buttons {
-  margin-top: 15px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  margin-right: 10px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-/* View button */
-.view-btn {
-  background: purple;
-  color: white;
-}
-
-/* Download button */
-.download-btn {
-  background: gold;
-  color: black;
-}
-
-/* Hover effect */
-.btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: 0.3s;
+    margin-bottom: 25px;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: gold;
-  box-shadow: 0 0 15px rgba(128, 0, 255, 0.4);
+    transform: translateY(-8px);
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.4);
 }
 
 .card h3 {
-  color: gold;
-  margin-bottom: 10px;
+    color: gold;
+    margin-bottom: 15px;
 }
 
-/* FORM */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+
+/* =========================================
+   SERVICE IMAGES
+========================================= */
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-input, select {
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background: #000;
-  color: white;
+
+/* =========================================
+   EXPANDED SERVICES
+========================================= */
+
+.services-expanded {
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* CONTACT */
-#contact p {
-  margin: 10px 0;
-  color: #ccc;
+
+/* =========================================
+   VIEW PRICES BUTTON
+========================================= */
+
+.toggle-btn {
+    background: linear-gradient(135deg, #8000ff, #b84dff);
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
-/* PREMIUM BUTTON LAYOUT INSIDE CARD */
+
+.toggle-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+
+/* =========================================
+   PRICE LIST DROPDOWN
+========================================= */
+
+.price-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.8s ease,
+        opacity 0.5s ease,
+        margin-top 0.5s ease;
+}
+
+
+/* THIS IS THE IMPORTANT PART */
+
+.price-content.active {
+    max-height: 10000px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   PRICE LIST IMAGE
+========================================= */
+
+.price-img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    border-radius: 10px;
+    margin: 10px auto 0;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
 .card .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-/* PREMIUM BUTTON STYLE */
-.card .btn {
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease;
+
+/* =========================================
+   GENERAL BUTTON
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
-/* VIEW BUTTON (Purple Luxury) */
-.card .view-btn {
-  background: linear-gradient(135deg, #8000ff, #b84dff);
-  color: white;
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-btn {
+    background: linear-gradient(135deg, gold, orange);
+    color: black;
 }
 
-/* DOWNLOAD BUTTON (Gold Luxury) */
-.card .download-btn {
-  background: linear-gradient(135deg, gold, orange);
-  color: black;
+.download-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
-/* WHATSAPP BUTTON */
-.card .whatsapp-btn {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: white;
+
+/* =========================================
+   WHATSAPP BUTTON
+========================================= */
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
 }
 
-/* HOVER EFFECT */
-.card .btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+.whatsapp-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+#contact p {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #000;
+    color: white;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .price-img {
+        width: 100%;
+    }
+
 }
