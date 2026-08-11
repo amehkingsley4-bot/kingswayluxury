@@ -359,3 +359,488 @@ select {
     }
 
 }
+/* ======================================
+   BOOKING SYSTEM
+====================================== */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+
+/* START BOOKING */
+
+.start-booking-btn {
+  background: linear-gradient(135deg, #8000ff, #b84dff);
+  color: white;
+}
+
+
+/* BOOKING DROPDOWN */
+
+.booking-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition:
+    max-height 0.7s ease,
+    opacity 0.4s ease;
+
+  margin-top: 20px;
+}
+
+
+.booking-content.active {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+
+/* BOOKING FORM */
+
+.laundry-booking-form {
+  background: #151515;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  margin-top: 20px;
+}
+
+
+.laundry-booking-form h4 {
+  color: gold;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
+/* BOOKING ROW */
+
+.booking-row {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    0.8fr
+    1fr
+    0.8fr;
+
+  gap: 10px;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+
+.booking-row select,
+.booking-row input {
+  width: 100%;
+  padding: 12px;
+
+  background: #000;
+  color: white;
+
+  border: 1px solid #444;
+  border-radius: 7px;
+}
+
+
+.item-total {
+  color: gold;
+  font-weight: bold;
+}
+
+
+/* ADD ITEM */
+
+.add-item-btn {
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+
+  padding: 10px 18px;
+
+  margin-top: 10px;
+}
+
+
+.add-item-btn:hover {
+  background: gold;
+  color: black;
+}
+
+
+/* OVERALL TOTAL */
+
+.overall-total {
+  margin-top: 25px;
+
+  padding: 18px;
+
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+
+  font-size: 20px;
+}
+
+
+.grand-total {
+  color: gold;
+  margin-left: 10px;
+}
+
+
+/* SUBMIT */
+
+.submit-booking-btn {
+  margin-top: 20px;
+
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    gold,
+    orange
+  );
+
+  color: black;
+
+  font-size: 16px;
+}
+
+
+/* MESSAGE */
+
+.booking-message {
+  margin-top: 15px;
+  color: gold;
+  font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .booking-row {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .action-buttons {
+
+    flex-direction: column;
+
+  }
+
+  .action-buttons .btn,
+  .action-buttons button {
+
+    width: 100%;
+
+  }
+
+}
+/* =========================================
+   LAUNDRY BOOKING
+========================================= */
+
+.service-booking-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 35px;
+  background: #111;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.service-booking-card h3 {
+  color: gold;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.start-booking-btn,
+.download-btn,
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+/* START BOOKING */
+
+.start-booking-btn {
+  background: linear-gradient(135deg, #8000ff, #b84dff);
+  color: white;
+}
+
+.start-booking-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
+}
+
+
+/* DOWNLOAD */
+
+.download-btn {
+  background: linear-gradient(135deg, gold, #ffb300);
+  color: #000;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   BOOKING DROPDOWN
+========================================= */
+
+.booking-content {
+  display: none;
+  margin-top: 30px;
+  padding: 30px;
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+}
+
+
+/* THIS IS WHAT MAKES IT APPEAR */
+
+.booking-content.active {
+  display: block;
+}
+
+
+/* =========================================
+   BOOKING FORM
+========================================= */
+
+.laundry-booking-form {
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+}
+
+.laundry-booking-form h4 {
+  text-align: center;
+  color: gold;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+
+.laundry-booking-form input,
+.laundry-booking-form select {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #151515;
+  color: white;
+}
+
+
+/* =========================================
+   BOOKING ROW
+========================================= */
+
+.booking-items {
+  margin-top: 20px;
+}
+
+.booking-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+
+.item-total {
+  color: gold;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* =========================================
+   ADD ITEM
+========================================= */
+
+.add-item-btn {
+  margin-top: 15px;
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+  padding: 10px 18px;
+  border-radius: 25px;
+}
+
+.add-item-btn:hover {
+  background: gold;
+  color: black;
+}
+
+
+/* =========================================
+   REMOVE ITEM
+========================================= */
+
+.remove-item-btn {
+  background: #8b0000;
+  color: white;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   OVERALL TOTAL
+========================================= */
+
+.overall-total {
+  margin-top: 25px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+  text-align: right;
+  font-size: 20px;
+  color: white;
+}
+
+.grand-total {
+  color: gold;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+
+/* =========================================
+   SUBMIT BOOKING
+========================================= */
+
+.submit-booking-btn {
+  display: block;
+  margin: 25px auto 0;
+  background: linear-gradient(135deg, gold, #ffb300);
+  color: black;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-booking-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+
+/* =========================================
+   PRICE LIST DROPDOWN
+========================================= */
+
+.price-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.price-content.active {
+  display: block;
+}
+
+.price-img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .service-booking-card {
+    padding: 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .start-booking-btn,
+  .download-btn,
+  .whatsapp-btn {
+    width: 100%;
+  }
+
+  .booking-row {
+    grid-template-columns: 1fr;
+  }
+
+  .item-total {
+    text-align: left;
+    padding: 5px;
+  }
+
+  .overall-total {
+    text-align: center;
+  }
+
+}

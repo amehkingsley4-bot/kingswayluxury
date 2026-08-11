@@ -1,60 +1,121 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ==============================
-    // BOOKING FORM
-    // ==============================
-    const form = document.getElementById("bookingForm");
+  // ==============================
+  // START BOOKING DROPDOWN
+  // ==============================
 
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+  document.querySelectorAll(".start-booking-btn").forEach(button => {
 
-            const name = document.getElementById("name").value;
-            const location = document.getElementById("location").value;
-            const service = document.getElementById("service").value;
+    button.addEventListener("click", function () {
 
-            const message =
-                `Hello Kingsway Luxury 👑,%0A` +
-                `Name: ${encodeURIComponent(name)}%0A` +
-                `Location: ${encodeURIComponent(location)}%0A` +
-                `Service: ${encodeURIComponent(service)}`;
+      const bookingContent = this.closest(".service-booking-card")
+        .querySelector(".booking-content");
 
-            const phone = "2348136905393";
+      bookingContent.classList.toggle("active");
 
-            window.open(
-                `https://wa.me/${phone}?text=${message}`,
-                "_blank"
-            );
-        });
-    }
-
-
-    // ==============================
-    // PRICE LIST DROPDOWN
-    // ==============================
-    const toggleButtons = document.querySelectorAll(".toggle-btn");
-
-    toggleButtons.forEach(function (button) {
-
-        button.addEventListener("click", function () {
-
-            const priceContent = this.nextElementSibling;
-
-            if (!priceContent) {
-                return;
-            }
-
-            priceContent.classList.toggle("active");
-
-            // Change button text
-            if (priceContent.classList.contains("active")) {
-                this.textContent = "Hide Prices";
-            } else {
-                this.textContent = "View Prices";
-            }
-
-        });
+      // Change button text
+      if (bookingContent.classList.contains("active")) {
+        this.textContent = "Close Booking";
+      } else {
+        this.textContent = "Start Booking";
+      }
 
     });
+
+  });
+
+
+  // ==============================
+  // PRICE LIST DROPDOWN
+  // ==============================
+
+  document.querySelectorAll(".toggle-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+      const content = this.nextElementSibling;
+
+      content.classList.toggle("active");
+
+      if (content.classList.contains("active")) {
+        this.textContent = "Hide Prices";
+      } else {
+        this.textContent = "View Prices";
+      }
+
+    });
+
+  });
+
+
+  // ==============================
+  // ADD ANOTHER ITEM
+  // ==============================
+
+  document.querySelectorAll(".add-item-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+      const bookingItems = this
+        .closest(".laundry-booking-form")
+        .querySelector(".booking-items");
+
+      const newRow = document.createElement("div");
+
+      newRow.className = "booking-row";
+
+      newRow.innerHTML = `
+        <select class="item-select">
+          <option value="">Select Item</option>
+          <option value="Native">Native</option>
+          <option value="Shirt">Shirt</option>
+          <option value="Trouser">Trouser</option>
+          <option value="Skirt">Skirt</option>
+          <option value="Gown">Gown</option>
+          <option value="Agbada">Agbada</option>
+          <option value="Bedsheet">Bedsheet</option>
+          <option value="Duvet">Duvet</option>
+          <option value="Others">Others</option>
+        </select>
+
+        <input
+          type="number"
+          class="item-quantity"
+          min="1"
+          placeholder="Quantity"
+        >
+
+        <select class="item-price">
+          <option value="">Price</option>
+        </select>
+
+        <span class="item-total">₦0</span>
+
+        <button type="button" class="remove-item-btn">
+          Remove
+        </button>
+      `;
+
+      bookingItems.appendChild(newRow);
+
+    });
+
+  });
+
+
+  // ==============================
+  // REMOVE ITEM
+  // ==============================
+
+  document.addEventListener("click", function (e) {
+
+    if (e.target.classList.contains("remove-item-btn")) {
+
+      e.target.closest(".booking-row").remove();
+
+    }
+
+  });
+
 
 });

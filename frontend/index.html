@@ -62,43 +62,135 @@
 <section class="services-expanded">
 
     <!-- LAUNDRY -->
-    <div class="card">
+    <!-- LAUNDRY BOOKING -->
+<div class="card service-booking-card">
 
-        <h3>Laundry & Dry Cleaning</h3>
+  <h3>Laundry & Dry Cleaning</h3>
 
-        <button class="toggle-btn">
-            View Prices
-        </button>
+  <div class="action-buttons">
 
-        <div class="price-content">
+    <button type="button" class="start-booking-btn">
+      Start Booking
+    </button>
 
-            <img
-                src="assets/laundry.png"
-                alt="Laundry Price List"
-                class="price-img"
-            >
+    <a href="assets/laundry.pdf"
+       download
+       class="btn download-btn">
+      Download Price List
+    </a>
 
-            <div class="buttons">
+    <a href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20Laundry%20service"
+       target="_blank"
+       class="btn whatsapp-btn">
+      Chat on WhatsApp
+    </a>
 
-                <a
-                    href="assets/laundry.pdf"
-                    download
-                    class="btn download-btn">
-                    Download Price List
-                </a>
+  </div>
 
-                <a
-                    href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20Laundry%20service"
-                    target="_blank"
-                    class="btn whatsapp-btn">
-                    Chat on WhatsApp
-                </a>
 
-            </div>
+  <!-- BOOKING FORM -->
+
+  <div class="booking-content">
+
+    <form class="laundry-booking-form">
+
+      <h4>Place Your Laundry Order</h4>
+
+      <input
+        type="text"
+        class="customer-name"
+        placeholder="Your Name"
+        required
+      >
+
+      <input
+        type="tel"
+        class="customer-phone"
+        placeholder="Phone Number"
+        required
+      >
+
+      <input
+        type="text"
+        class="customer-location"
+        placeholder="Your Location"
+        required
+      >
+
+
+      <!-- ITEMS -->
+
+      <div class="booking-items">
+
+        <div class="booking-row">
+
+          <select class="item-select">
+            <option value="">Select Item</option>
+            <option value="Native">Native</option>
+            <option value="Shirt">Shirt</option>
+            <option value="Trouser">Trouser</option>
+            <option value="Skirt">Skirt</option>
+            <option value="Gown">Gown</option>
+            <option value="Agbada">Agbada</option>
+            <option value="Bedsheet">Bedsheet</option>
+            <option value="Duvet">Duvet</option>
+            <option value="Others">Others</option>
+          </select>
+
+
+          <input
+            type="number"
+            class="item-quantity"
+            min="1"
+            placeholder="Quantity"
+          >
+
+
+          <select class="item-price">
+            <option value="">Price</option>
+          </select>
+
+
+          <span class="item-total">
+            ₦0
+          </span>
 
         </div>
 
-    </div>
+      </div>
+
+
+      <button
+        type="button"
+        class="add-item-btn">
+        + Add Another Item
+      </button>
+
+
+      <div class="overall-total">
+
+        Overall Total:
+
+        <strong class="grand-total">
+          ₦0
+        </strong>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-booking-btn">
+        Submit Booking
+      </button>
+
+      <p class="booking-message"></p>
+
+    </form>
+
+  </div>
+
+</div>
 
 
     <!-- HOUSE CLEANING -->
