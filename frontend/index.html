@@ -1,228 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cinzel:wght@600&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kingsway Luxury</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cinzel:wght@600&display=swap"
+        rel="stylesheet"
+    >
+
+    <title>Kingsway Luxury</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <h1>Kingsway Luxury</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-  <!-- HERO -->
+    <header>
+        <h1>Kingsway Luxury</h1>
 
-  <section class="hero">
-  <h1>Kingsway Luxury</h1>
-  <p>Feel like Royalty</p>
-</section>
-
-  <!-- SERVICES -->
- <section id="services">
-  <h2>Our Premium Services</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Laundry & Dry Cleaning</h3>
-      <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=800&q=80" alt="Laundry Service">
-      <p>Fresh, clean, and professionally handled garments.</p>
-    </div>
-
-    <div class="card">
-      <h3>Interior Decor</h3>
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80" alt="Luxury Bedroom Decor">
-    <p>Transform your home into elegance.</p>
-    </div>
-
-    <div class="card">
-      <h3>House Cleaning</h3>
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="House Cleaning">
-      <p>Spotless spaces with attention to detail.</p>
-    </div>
-
-    <div class="card">
-      <h3>Home Haircut</h3>
-      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Home Haircut Service">
-      <p>Professional grooming at your convenience.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="services-expanded">
-
-    <!-- LAUNDRY -->
-    <!-- LAUNDRY BOOKING -->
-<div class="card service-booking-card">
-
-  <h3>Laundry & Dry Cleaning</h3>
-
-  <div class="action-buttons">
-
-    <button type="button" class="start-booking-btn">
-      Start Booking
-    </button>
-
-    <a href="assets/laundry.pdf"
-       download
-       class="btn download-btn">
-      Download Price List
-    </a>
-
-    <a href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20Laundry%20service"
-       target="_blank"
-       class="btn whatsapp-btn">
-      Chat on WhatsApp
-    </a>
-
-  </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
 
-  <!-- BOOKING FORM -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
-  <div class="booking-content">
+    <section class="hero">
 
-    <form class="laundry-booking-form">
+        <h1>Kingsway Luxury</h1>
 
-      <h4>Place Your Laundry Order</h4>
+        <p>Feel like Royalty</p>
 
-      <input
-        type="text"
-        class="customer-name"
-        placeholder="Your Name"
-        required
-      >
-
-      <input
-        type="tel"
-        class="customer-phone"
-        placeholder="Phone Number"
-        required
-      >
-
-      <input
-        type="text"
-        class="customer-location"
-        placeholder="Your Location"
-        required
-      >
+    </section>
 
 
-      <!-- ITEMS -->
+    <!-- =========================
+         SERVICES
+    ========================== -->
 
-      <div class="booking-items">
+    <section id="services">
 
-        <div class="booking-row">
+        <h2>Our Premium Services</h2>
 
-          <select class="item-select">
-            <option value="">Select Item</option>
-            <option value="Native">Native</option>
-            <option value="Shirt">Shirt</option>
-            <option value="Trouser">Trouser</option>
-            <option value="Skirt">Skirt</option>
-            <option value="Gown">Gown</option>
-            <option value="Agbada">Agbada</option>
-            <option value="Bedsheet">Bedsheet</option>
-            <option value="Duvet">Duvet</option>
-            <option value="Others">Others</option>
-          </select>
+        <div class="grid">
 
+            <!-- LAUNDRY -->
 
-          <input
-            type="number"
-            class="item-quantity"
-            min="1"
-            placeholder="Quantity"
-          >
+            <div class="card">
 
+                <h3>Laundry & Dry Cleaning</h3>
 
-          <select class="item-price">
-    <option value="">Select Service</option>
-</select>
+                <img
+                    src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=800&q=80"
+                    alt="Laundry Service"
+                >
+
+                <p>
+                    Fresh, clean, and professionally handled garments.
+                </p>
+
+            </div>
 
 
-          <span class="item-total">
-            ₦0
-          </span>
+            <!-- INTERIOR DECOR -->
+
+            <div class="card">
+
+                <h3>Interior Decor</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80"
+                    alt="Luxury Bedroom Decor"
+                >
+
+                <p>
+                    Transform your home into elegance.
+                </p>
+
+            </div>
+
+
+            <!-- HOUSE CLEANING -->
+
+            <div class="card">
+
+                <h3>House Cleaning</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
+                    alt="House Cleaning"
+                >
+
+                <p>
+                    Spotless spaces with attention to detail.
+                </p>
+
+            </div>
+
+
+            <!-- HOME HAIRCUT -->
+
+            <div class="card">
+
+                <h3>Home Haircut</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80"
+                    alt="Home Haircut Service"
+                >
+
+                <p>
+                    Professional grooming at your convenience.
+                </p>
+
+            </div>
 
         </div>
 
-      </div>
+    </section>
 
 
-      <button
-        type="button"
-        class="add-item-btn">
-        + Add Another Item
-      </button>
+
+    <!-- ==================================================
+         SERVICE BOOKING SECTION
+    =================================================== -->
+
+    <section class="services-expanded">
 
 
-      <div class="overall-total">
+        <!-- ==================================================
+             LAUNDRY
+        =================================================== -->
 
-        Overall Total:
+        <div class="card service-booking-card">
 
-        <strong class="grand-total">
-          ₦0
-        </strong>
+            <h3>Laundry & Dry Cleaning</h3>
 
-      </div>
+            <div class="action-buttons">
 
-
-      <button
-        type="submit"
-        class="submit-booking-btn">
-        Submit Booking
-      </button>
-
-      <p class="booking-message"></p>
-
-    </form>
-
-  </div>
-
-</div>
+                <button
+                    type="button"
+                    class="start-booking-btn"
+                >
+                    Start Booking
+                </button>
 
 
-    <!-- HOUSE CLEANING -->
-    <div class="card">
+                <a
+                    href="assets/laundry.pdf"
+                    download
+                    class="btn download-btn"
+                >
+                    Download Price List
+                </a>
 
-        <h3>House Cleaning</h3>
 
-        <button class="toggle-btn">
-            View Prices
-        </button>
+                <a
+                    href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20Laundry%20service"
+                    target="_blank"
+                    class="btn whatsapp-btn"
+                >
+                    Chat on WhatsApp
+                </a>
 
-        <div class="price-content">
+            </div>
 
-            <img
-                src="assets/cleaning.png"
-                alt="House Cleaning Price List"
-                class="price-img"
-            >
 
-            <div class="buttons">
+            <!-- LAUNDRY BOOKING FORM -->
+
+            <div class="booking-content">
+
+                <form class="laundry-booking-form">
+
+                    <h4>Place Your Laundry Order</h4>
+
+
+                    <input
+                        type="text"
+                        class="customer-name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+
+                    <input
+                        type="tel"
+                        class="customer-phone"
+                        placeholder="Phone Number"
+                        required
+                    >
+
+
+                    <input
+                        type="email"
+                        class="customer-email"
+                        placeholder="Email Address"
+                        required
+                    >
+
+
+                    <label for="laundry-pickup-date">
+                        Preferred Pickup / Collection Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="laundry-pickup-date"
+                        class="pickup-date"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        class="pickup-address"
+                        placeholder="Exact Pickup Address"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        class="delivery-address"
+                        placeholder="Exact Delivery Address"
+                        required
+                    >
+
+
+                    <div class="booking-items">
+
+                        <div class="booking-row">
+
+                            <select class="item-select">
+
+                                <option value="">
+                                    Select Item
+                                </option>
+
+                                <option value="Native">
+                                    Native
+                                </option>
+
+                                <option value="Shirt">
+                                    Shirt
+                                </option>
+
+                                <option value="Trouser">
+                                    Trouser
+                                </option>
+
+                                <option value="Skirt">
+                                    Skirt
+                                </option>
+
+                                <option value="Gown">
+                                    Gown
+                                </option>
+
+                                <option value="Agbada">
+                                    Agbada
+                                </option>
+
+                                <option value="Bedsheet">
+                                    Bedsheet
+                                </option>
+
+                                <option value="Duvet">
+                                    Duvet
+                                </option>
+
+                                <option value="Curtain">
+                                    Curtain
+                                </option>
+
+                            </select>
+
+
+                            <input
+                                type="number"
+                                class="item-quantity"
+                                min="1"
+                                placeholder="Quantity"
+                            >
+
+
+                            <select class="item-price">
+
+                                <option value="">
+                                    Select Price
+                                </option>
+
+                            </select>
+
+
+                            <span class="item-total">
+                                ₦0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="add-item-btn"
+                    >
+                        + Add Another Item
+                    </button>
+
+
+                    <div class="overall-total">
+
+                        Overall Total:
+
+                        <strong class="grand-total">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-booking-btn"
+                    >
+                        Submit Booking
+                    </button>
+
+
+                    <p class="booking-message"></p>
+
+                </form>
+
+
+                <!-- PAYMENT SECTION -->
+
+                <div
+                    class="payment-section laundry-payment-section"
+                    hidden
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HOUSE CLEANING
+        =================================================== -->
+
+        <div class="card service-booking-card cleaning-card">
+
+            <h3>House Cleaning</h3>
+
+            <div class="action-buttons">
+
+                <button
+                    type="button"
+                    class="start-booking-btn cleaning-booking-toggle"
+                >
+                    Start Booking
+                </button>
+
 
                 <a
                     href="assets/cleaning.pdf"
                     download
-                    class="btn download-btn">
+                    class="btn download-btn"
+                >
                     Download Price List
                 </a>
+
 
                 <a
                     href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20House%20Cleaning%20service"
                     target="_blank"
-                    class="btn whatsapp-btn">
+                    class="btn whatsapp-btn"
+                >
+                    Chat on WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- HOUSE CLEANING BOOKING -->
+
+            <div class="cleaning-booking-content">
+
+                <form class="cleaning-booking-form">
+
+                    <h4>Book House Cleaning</h4>
+
+
+                    <input
+                        type="text"
+                        class="cleaning-customer-name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+
+                    <input
+                        type="tel"
+                        class="cleaning-customer-phone"
+                        placeholder="Phone Number"
+                        required
+                    >
+
+
+                    <input
+                        type="email"
+                        class="cleaning-customer-email"
+                        placeholder="Email Address"
+                        required
+                    >
+
+
+                    <label for="cleaning-service-date">
+                        Preferred Service Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="cleaning-service-date"
+                        class="cleaning-service-date"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        class="cleaning-service-address"
+                        placeholder="Exact Service Address"
+                        required
+                    >
+
+
+                    <select
+                        class="cleaning-package"
+                        required
+                    >
+
+                        <option value="">
+                            Select Cleaning Package
+                        </option>
+
+                        <option value="deep">
+                            Deep Cleaning Only
+                        </option>
+
+                        <option value="upholstery">
+                            Deep Cleaning + Upholstery + Cleaning (One Set)
+                        </option>
+
+                        <option value="fumigation">
+                            Deep Cleaning + Fumigation
+                        </option>
+
+                        <option value="upholstery-fumigation">
+                            Deep Cleaning + Upholstery + Fumigation
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        class="cleaning-bedroom"
+                        required
+                    >
+
+                        <option value="">
+                            Select Number of Bedrooms
+                        </option>
+
+                        <option value="1">
+                            1 Bedroom
+                        </option>
+
+                        <option value="2">
+                            2 Bedrooms
+                        </option>
+
+                        <option value="3">
+                            3 Bedrooms
+                        </option>
+
+                        <option value="4">
+                            4 Bedrooms
+                        </option>
+
+                        <option value="5">
+                            5 Bedrooms
+                        </option>
+
+                        <option value="6">
+                            6 Bedrooms
+                        </option>
+
+                    </select>
+
+
+                    <div class="cleaning-selected-price">
+
+                        Estimated Price:
+
+                        <strong class="cleaning-price">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-cleaning-booking-btn"
+                    >
+                        Submit Booking
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="close-cleaning-booking-btn"
+                    >
+                        Close Booking
+                    </button>
+
+
+                    <p class="cleaning-booking-message"></p>
+
+                </form>
+
+
+                <!-- PAYMENT SECTION -->
+
+                <div
+                    class="payment-section cleaning-payment-section"
+                    hidden
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             INTERIOR DECOR
+        =================================================== -->
+
+        <div class="card interior-card">
+
+            <h3>Interior Decor</h3>
+
+            <p>
+                Transform your space into elegance.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    class="explore-interior-btn"
+                >
+                    Explore
+                </button>
+
+
+                <a
+                    href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20Interior%20Decor%20service"
+                    target="_blank"
+                    class="btn whatsapp-btn"
+                >
                     Chat on WhatsApp
                 </a>
 
@@ -230,80 +592,682 @@
 
         </div>
 
-    </div>
 
 
-    <!-- INTERIOR DECOR -->
-    <div class="card">
+        <!-- ==================================================
+             INTERIOR DECOR EXPLORE PANEL
+        =================================================== -->
 
-        <h3>Interior Decor</h3>
+        <div
+            id="interiorExplorePanel"
+            class="interior-explore-panel"
+        >
 
-        <p>
-            Transform your space into elegance.
-        </p>
+            <div class="interior-explore-container">
 
-        <div class="buttons">
+                <button
+                    type="button"
+                    class="close-interior-btn"
+                >
+                    ×
+                </button>
 
-            <a
-                href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20Interior%20Decor%20service"
-                target="_blank"
-                class="btn whatsapp-btn">
-                Chat on WhatsApp
-            </a>
+
+                <h2>
+                    Explore Our Interior Services
+                </h2>
+
+
+                <p class="interior-intro">
+                    Discover our range of interior decoration services.
+                </p>
+
+
+                <div class="interior-service-grid">
+
+
+                    <!-- BEDDINGS -->
+
+                    <div class="interior-service-item">
+
+                        <div class="interior-image-box">
+
+                            <img
+                                src="assets/interior/beddings.jpg"
+                                alt="Luxury Beddings"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Beddings
+                        </h3>
+
+
+                        <p>
+                            Elegant beddings and bedroom styling
+                            designed to give your room a royal feel.
+                        </p>
+
+
+                        <a
+                            href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20Beddings"
+                            target="_blank"
+                            class="btn whatsapp-btn"
+                        >
+                            Inquire
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- CURTAINS -->
+
+                    <div class="interior-service-item">
+
+                        <div class="interior-image-box">
+
+                            <img
+                                src="assets/interior/curtains.jpg"
+                                alt="Luxury Curtains"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Curtains
+                        </h3>
+
+
+                        <p>
+                            Beautiful curtains and window treatments
+                            for stylish and elegant spaces.
+                        </p>
+
+
+                        <a
+                            href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20Curtains"
+                            target="_blank"
+                            class="btn whatsapp-btn"
+                        >
+                            Inquire
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- FURNITURE -->
+
+                    <div class="interior-service-item">
+
+                        <div class="interior-image-box">
+
+                            <img
+                                src="assets/interior/furniture.jpg"
+                                alt="Luxury Furniture"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Furniture
+                        </h3>
+
+
+                        <p>
+                            Stylish furniture solutions that bring
+                            comfort and luxury into your space.
+                        </p>
+
+
+                        <a
+                            href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20Furniture"
+                            target="_blank"
+                            class="btn whatsapp-btn"
+                        >
+                            Inquire
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- PAINTING & WALLPAPERS -->
+
+                    <div class="interior-service-item">
+
+                        <div class="interior-image-box">
+
+                            <img
+                                src="assets/interior/painting-wallpaper.jpg"
+                                alt="Painting and Wallpapers"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Painting & Wallpapers
+                        </h3>
+
+
+                        <p>
+                            Transform your walls with beautiful
+                            painting finishes and attractive wallpapers.
+                        </p>
+
+
+                        <a
+                            href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20Painting%20and%20Wallpapers"
+                            target="_blank"
+                            class="btn whatsapp-btn"
+                        >
+                            Inquire
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
 
 
-    <!-- HOME HAIRCUT -->
-    <div class="card">
+        <!-- ==================================================
+             INTERIOR DECOR GALLERY
+        =================================================== -->
 
-        <h3>Home Haircut</h3>
+        <div
+            class="interior-gallery"
+            id="interiorGallery"
+        >
 
-        <button class="toggle-btn">
-            View Prices
-        </button>
+            <div class="interior-gallery-box">
 
-        <div class="price-content">
+                <button
+                    type="button"
+                    class="close-interior-gallery"
+                    id="closeInteriorGallery"
+                >
+                    ×
+                </button>
 
-            <img
-                src="assets/haircut.png"
-                alt="Home Haircut Price List"
-                class="price-img"
-            >
 
-            <div class="buttons">
+                <h2>
+                    Explore Our Interior Services
+                </h2>
+
+
+                <p class="gallery-subtitle">
+                    Discover our interior decor services
+                </p>
+
+
+                <!-- BEDDINGS -->
+
+                <section class="gallery-category">
+
+                    <h3>
+                        Beddings
+                    </h3>
+
+
+                    <div class="gallery-grid">
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/beddings-1.jpg"
+                                alt="Beddings"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/beddings-2.jpg"
+                                alt="Beddings"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/beddings-3.jpg"
+                                alt="Beddings"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/beddings-4.jpg"
+                                alt="Beddings"
+                            >
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CURTAINS -->
+
+                <section class="gallery-category">
+
+                    <h3>
+                        Curtains
+                    </h3>
+
+
+                    <div class="gallery-grid">
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/curtains-1.jpg"
+                                alt="Curtains"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/curtains-2.jpg"
+                                alt="Curtains"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/curtains-3.jpg"
+                                alt="Curtains"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/curtains-4.jpg"
+                                alt="Curtains"
+                            >
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FURNITURE -->
+
+                <section class="gallery-category">
+
+                    <h3>
+                        Furniture
+                    </h3>
+
+
+                    <div class="gallery-grid">
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/furniture-1.jpg"
+                                alt="Furniture"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/furniture-2.jpg"
+                                alt="Furniture"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/furniture-3.jpg"
+                                alt="Furniture"
+                            >
+                        </div>
+
+                        <div class="gallery-image-slot">
+                            <img
+                                src="assets/interior/furniture-4.jpg"
+                                alt="Furniture"
+                            >
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAINTING & WALLPAPERS -->
+
+                <section class="gallery-category">
+
+                    <h3>
+                        Painting & Wallpapers
+                    </h3>
+
+
+                    <div class="gallery-grid">
+
+                        <div class="gallery-image-slot">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80"
+                                alt="Luxury Wallpaper Interior"
+                            >
+
+                        </div>
+
+
+                        <div class="gallery-image-slot">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80"
+                                alt="Interior Wall Design"
+                            >
+
+                        </div>
+
+
+                        <div class="gallery-image-slot">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=80"
+                                alt="Luxury Wall Painting"
+                            >
+
+                        </div>
+
+
+                        <div class="gallery-image-slot">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80"
+                                alt="Decorative Wall Design"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="gallery-contact">
+
+                    <p>
+                        Interested in any of our interior services?
+                    </p>
+
+
+                    <a
+                        href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20Interior%20Decor%20services"
+                        target="_blank"
+                        class="btn whatsapp-btn"
+                    >
+                        Chat With Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HOME HAIRCUT
+        =================================================== -->
+
+        <div class="card service-booking-card">
+
+            <h3>
+                Home Haircut
+            </h3>
+
+
+            <div class="action-buttons">
+
+                <button
+                    type="button"
+                    class="start-haircut-booking-btn"
+                >
+                    Start Booking
+                </button>
+
 
                 <a
                     href="assets/haircut.pdf"
                     download
-                    class="btn download-btn">
+                    class="btn download-btn"
+                >
                     Download Price List
                 </a>
+
 
                 <a
                     href="https://wa.me/2348136905393?text=Hello%20Kingsway%20Luxury,%20I'm%20interested%20in%20your%20Home%20Haircut%20service"
                     target="_blank"
-                    class="btn whatsapp-btn">
+                    class="btn whatsapp-btn"
+                >
                     Chat on WhatsApp
                 </a>
 
             </div>
 
+
+            <!-- HAIRCUT BOOKING -->
+
+            <div class="haircut-booking-content">
+
+                <form class="haircut-booking-form">
+
+                    <h4>
+                        Book Home Haircut
+                    </h4>
+
+
+                    <input
+                        type="text"
+                        class="haircut-customer-name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+
+                    <input
+                        type="tel"
+                        class="haircut-customer-phone"
+                        placeholder="Phone Number"
+                        required
+                    >
+
+
+                    <input
+                        type="email"
+                        class="haircut-customer-email"
+                        placeholder="Email Address"
+                        required
+                    >
+
+
+                    <label for="haircut-appointment-date">
+                        Preferred Appointment Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="haircut-appointment-date"
+                        class="haircut-appointment-date"
+                        required
+                    >
+
+
+                    <label for="haircut-appointment-time">
+                        Preferred Appointment Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="haircut-appointment-time"
+                        class="haircut-appointment-time"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        class="haircut-service-address"
+                        placeholder="Exact Service Address"
+                        required
+                    >
+
+
+                    <select
+                        class="haircut-service-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select Haircut Service
+                        </option>
+
+
+                        <option
+                            value="Haircut"
+                            data-price="5000"
+                        >
+                            Haircut — ₦5,000
+                        </option>
+
+
+                        <option
+                            value="Kids Cut"
+                            data-price="3500"
+                        >
+                            Kids Cut — ₦3,500
+                        </option>
+
+
+                        <option
+                            value="Shaving"
+                            data-price="3000"
+                        >
+                            Shaving — ₦3,000
+                        </option>
+
+
+                        <option
+                            value="Ladies Cut"
+                            data-price="7000"
+                        >
+                            Ladies Cut — ₦7,000
+                        </option>
+
+
+                        <option
+                            value="Dandruff Care"
+                            data-price="2000"
+                        >
+                            Dandruff Care — ₦2,000
+                        </option>
+
+
+                        <option
+                            value="Hair Wash"
+                            data-price="1000"
+                        >
+                            Hair Wash — ₦1,000
+                        </option>
+
+
+                        <option
+                            value="Full Hair Color"
+                            data-price="10000"
+                        >
+                            Full Hair Color — ₦10,000
+                        </option>
+
+                    </select>
+
+
+                    <div class="selected-haircut-price">
+
+                        Selected Service:
+
+                        <strong class="haircut-price">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-haircut-booking-btn"
+                    >
+                        Submit Booking
+                    </button>
+
+
+                    <p class="haircut-booking-message"></p>
+
+                </form>
+
+
+                <!-- PAYMENT SECTION -->
+
+                <div
+                    class="payment-section haircut-payment-section"
+                    hidden
+                ></div>
+
+            </div>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
-  
-<!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Abuja, Nigeria</p>
-    <p>📞 08136905393</p>
-  </section>
 
-  <script src="script.js"></script>
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+
+        <p>
+            Head office: Small Sheraton Road, off Welder Junction, Aso Pada, Mararaba, Nasarawa State
+        </p>
+
+
+        <p>
+            Email: amehkingsley4@gmail.com
+        </p>
+
+
+        <p>
+            Phone: 08136905393
+        </p>
+
+    </section>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

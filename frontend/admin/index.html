@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Kingsway Luxury - Booking Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     LOGIN
+========================================== -->
+
+<section
+    id="loginSection"
+    class="login-section">
+
+    <div class="login-card">
+
+        <h1>Kingsway Luxury</h1>
+
+        <h2>Booking Dashboard</h2>
+
+        <p>Admin Login</p>
+
+        <form id="loginForm">
+
+            <input
+                type="password"
+                id="adminPassword"
+                placeholder="Enter admin password"
+                required>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p
+            id="loginMessage"
+            class="message">
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     DASHBOARD
+========================================== -->
+
+<section
+    id="dashboardSection"
+    class="dashboard-section hidden">
+
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>Kingsway Luxury</h1>
+
+            <p>
+                Booking Management Dashboard
+            </p>
+
+        </div>
+
+        <button
+            id="logoutButton"
+            class="logout-button">
+
+            Logout
+
+        </button>
+
+    </header>
+
+
+    <!-- =====================================
+         STATISTICS
+    ====================================== -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3>Total Bookings</h3>
+
+            <strong id="totalBookings">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Pending</h3>
+
+            <strong id="pendingBookings">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Payment Proofs</h3>
+
+            <strong id="proofBookings">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Confirmed</h3>
+
+            <strong id="confirmedBookings">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Completed</h3>
+
+            <strong id="completedBookings">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Cancelled</h3>
+
+            <strong id="cancelledBookings">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         FILTERS
+    ====================================== -->
+
+    <section class="controls">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search customer, phone, email or address">
+
+
+        <select id="serviceFilter">
+
+            <option value="all">
+                All Services
+            </option>
+
+            <option value="Laundry">
+                Laundry
+            </option>
+
+            <option value="Haircut">
+                Haircut
+            </option>
+
+            <option value="House Cleaning">
+                House Cleaning
+            </option>
+
+        </select>
+
+
+        <select id="statusFilter">
+
+            <option value="all">
+                All Booking Statuses
+            </option>
+
+            <option value="Pending">
+                Pending
+            </option>
+
+            <option value="Confirmed">
+                Confirmed
+            </option>
+
+            <option value="Completed">
+                Completed
+            </option>
+
+            <option value="Cancelled">
+                Cancelled
+            </option>
+
+        </select>
+
+
+        <select id="paymentFilter">
+
+            <option value="all">
+                All Payment Statuses
+            </option>
+
+            <option value="Pending">
+                Payment Pending
+            </option>
+
+            <option value="Proof Submitted">
+                Proof Submitted
+            </option>
+
+            <option value="Verified">
+                Payment Verified
+            </option>
+
+            <option value="Rejected">
+                Payment Rejected
+            </option>
+
+        </select>
+
+
+        <button id="refreshButton">
+            Refresh
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         MESSAGE
+    ====================================== -->
+
+    <p
+        id="dashboardMessage"
+        class="dashboard-message">
+    </p>
+
+
+    <!-- =====================================
+         BOOKINGS
+    ====================================== -->
+
+    <section
+        id="bookingsContainer"
+        class="bookings-container">
+    </section>
+
+
+</section>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
