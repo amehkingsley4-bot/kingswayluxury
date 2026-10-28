@@ -3,7 +3,7 @@
    ADMIN BOOKING DASHBOARD
 ========================================= */
 
-const API_BASE_URL = "http://127.0.0.1:5000";
+const API_BASE_URL = "https://kingswayluxury.onrender.com";
 
 /* Normalize booking type values from either the API or older records.
    The API uses lowercase values: laundry, haircut, cleaning. */

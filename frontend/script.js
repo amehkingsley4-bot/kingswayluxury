@@ -8,14 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
      * LOCAL DEVELOPMENT
      *
      * Your Node/Express backend currently runs on:
-     * http://127.0.0.1:5000
-     *
-     * When the backend is eventually hosted online,
-     * this URL will need to be changed to the public
-     * backend URL.
+     * https://kingswayluxury.onrender.com
+     * this is the public backend url
      */
 
-    const API_BASE_URL = "http://127.0.0.1:5000";
+    const API_BASE_URL = "https://kingswayluxury.onrender.com";
 
 
     /* =====================================================
